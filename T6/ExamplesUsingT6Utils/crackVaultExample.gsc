@@ -10,7 +10,7 @@ init()
 {	
 	/*
 	
-		Run threads here that're are for the level
+		Run threads here that're for the level
 	
 	*/
     level thread onPlayerConnect();
