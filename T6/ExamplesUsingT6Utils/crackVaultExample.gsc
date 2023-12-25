@@ -4,7 +4,7 @@
 #include maps/mp/zombies/_zm_utility;
 
 /*
-	DDDDec's Plutonium T6 script example using T6 Utils by fedddddd
+	DDDDec's Plutonium T6 crack vault script example using T6 Utils by fedddddd
 */
 init()
 {	
