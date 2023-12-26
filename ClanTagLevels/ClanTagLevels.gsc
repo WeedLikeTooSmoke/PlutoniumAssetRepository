@@ -51,9 +51,9 @@ onPlayerSay()
             args = strtok(message, " "); // Split the player message into arguments
             command = getSubStr(args[0], 1); 
             switch(command) {					
-				case "bet": // The name of the command taht you want them to use .vault
-				case "b": // The name of the command taht you want them to use .vlt
-					bet(player, args); // Runs bet(player, args); function 
+				case "levelup": // The name of the command taht you want them to use .vault
+				case "lvlup": // The name of the command taht you want them to use .vlt
+					playerLevelUp(player); // Runs bet(player, args); function 
 					break; // End
 				/*
 				
