@@ -29,7 +29,6 @@ onPlayerConnect()
 			Make sure to run functions after waittills
 		
 		*/
-		player thread setupVaultFolder()
     }
 }
 
