@@ -51,7 +51,7 @@ onPlayerSay()
             command = getSubStr(args[0], 1); 
             switch(command) {					
 				case "vault": // The name of the command taht you want them to use .vault
-				case "vlt": // The name of the command taht you want them to use .vlt
+				case "v": // The name of the command taht you want them to use .vlt
 					crackVault(player, args); // Runs crackVault(player, args); function 
 					break; // End
 				/*
