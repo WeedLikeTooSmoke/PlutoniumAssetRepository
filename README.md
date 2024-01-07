@@ -7,5 +7,5 @@ Crack Vault - Use numbers in chat to crack a vault filled with money by DDDDec<b
 Bet - bet money against a randomint generator by DDDDec<br />
 
 # Socials
-Website: https://ddddec.clipst.one
+Website: https://ddddec.clipst.one<br />
 discord: https://discord.clipst.one
