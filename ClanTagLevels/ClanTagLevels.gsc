@@ -322,7 +322,7 @@ playerLevelUp(player)
 }
 
 
-updatelevelValue( value ) // Update bank value into the file
+updatelevelValue( value ) // Update level value into the file
 {
     path = "level/" + self getGuid() + ".txt";
 
