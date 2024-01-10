@@ -23,6 +23,7 @@ onPlayerConnect()
     for (;;)
     {
         level waittill("connected", player); // Waits till the player conencts
+	player thread updateStatsOnQuit(player);
 		/*
         
 			Use threads here that you want to run after the player connects
@@ -49,10 +50,20 @@ onPlayerSay()
             args = strtok(message, " "); // Split the player message into arguments
             command = getSubStr(args[0], 1); 
             switch(command) {					
-				case "bet": // The name of the command taht you want them to use .vault
-				case "b": // The name of the command taht you want them to use .vlt
-					bet(player, args); // Runs bet(player, args); function 
-					break; // End
+				case "alltimestats":
+				case "ats":
+					playerAllTimeStats = strToK(player.pers["alltimestats"], ";");
+					kills = playerAllTimeStats[0];
+					revives = playerAllTimeStats[1];
+					headshots = playerAllTimeStats[2];
+					downs = playerAllTimeStats[3];
+					round = playerAllTimeStats[4];
+					player tell("^2Kills^7: " + kills);
+					player tell("^2Revives^7: " + revives);
+					player tell("^2Headshots^7: " + headshots);
+					player tell("^2Downs^7: " + downs);
+					player tell("^2Highest Round^7: " + round);
+					break;
 				/*
 				
 				Add more here
@@ -64,5 +75,52 @@ onPlayerSay()
 				*/
             }
         }
+    }
+}
+
+updateStatsOnQuit(player)
+{
+	self endon( "disconnect" );
+	level waittill("end_game");
+	
+	path = "alltimestats/" + self getGuid() + ".txt";
+	sortStats = strToK(player.pers["alltimestats"], ";");
+	sortKills = int(sortStats[0]) + int(player.pers["kills"]);
+	sortRevives = int(sortStats[1]) + int(player.pers["revives"]);
+	sortHeadshots = int(sortStats[2]) + int(player.pers["headshots"]);
+	sortDowns = int(sortStats[3]) + int(player.pers["downs"]);
+	if (level.round_number > int(sortRound))
+	{
+		sortRound = level.round_number;
+	}
+	else
+	{
+		sortRound = int(sortStats[4]);
+	}
+	newStats = sortKills+";"+sortRevives+";"+sortHeadshots+";"+sortDowns+";"+sortRound+"";
+	
+	file = fopen(path, "w");
+    	fwrite(file, newStats + "");
+    	fclose(file);
+}
+
+setupStats()
+{
+    self endon("disconnect");
+    level endon("end_game");
+    
+    path = "alltimestats/" + self getGuid() + ".txt";
+    if (!fileExists(path))
+    {
+        writeFile(path, "");
+        while(!fileExists(path)) wait 0.5;
+        file2 = fopen(path, "w");
+        fwrite(file2, "0;0;0;0;0");
+        fclose(file2);
+        self.pers["alltimestats"] = "0;0;0;0;0";  
+    }
+    else
+    {
+        self.pers["alltimestats"] = readFile(path);
     }
 }
