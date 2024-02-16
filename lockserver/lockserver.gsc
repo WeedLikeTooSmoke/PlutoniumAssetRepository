@@ -23,7 +23,6 @@ onPlayerConnect()
     for (;;)
     {
         level waittill("connected", player); // Waits till the player conencts
-	player thread updateStatsOnQuit(player);
 		/*
         
 			Use threads here that you want to run after the player connects
