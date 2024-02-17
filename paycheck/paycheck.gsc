@@ -4,7 +4,7 @@
 #include maps/mp/zombies/_zm_utility;
 
 /*
-	DDDDec's Plutonium T6 bet command
+	DDDDec's Plutonium T6 Player Pay Check
 */
 init()
 {	
