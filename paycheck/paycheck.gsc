@@ -47,7 +47,7 @@ playerpaycheck(player)
 		for(;;)
 		{
 			player.score = player.score + 10 * int(player.pers["rank"]);
-			wait(1,5);
+			wait(1.5);
 		}
 	}
 	else if(player.pers["rank"] == "VIP++")
