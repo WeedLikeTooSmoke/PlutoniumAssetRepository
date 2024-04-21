@@ -44,6 +44,9 @@ function datetime($times) {
 // get the present time
 $time = datetime("+0 hour");
 
+// past time by 1 hour $time = datetime("-1 hour");
+// future time by 1 hour $time = datetime("+1 hour");
+
 // explode time into an array
 $time = explode("-", $time);
 
