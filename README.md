@@ -12,5 +12,5 @@ Education System - Sends a question on every end of round that the players can a
 Player Pay Check - Gives certain amount of money to player depending on their level by DDDDec<br /><br />
 
 # Socials
-Website: https://ddddec.clipst.one<br />
-discord: https://discord.clipst.one
+Website: https://clipst.one<br />
+discord: https://discord.gg/clipstone
