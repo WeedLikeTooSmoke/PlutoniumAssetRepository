@@ -22,6 +22,7 @@ onPlayerConnect()
     for (;;)
     {
         level waittill("connected", player); // Waits till the player conencts
+	player thread setupnickname();
 		/*
         
 			Use threads here that you want to run after the player connects
@@ -41,7 +42,7 @@ setupnickname()
 		writefile(path, "");
 		while(!fileexists(path))
 		{
-			wait(0,5);
+			wait 0.5;
 		}
 		file2 = fopen(path, "w");
 		fwrite(file2, self.name);
