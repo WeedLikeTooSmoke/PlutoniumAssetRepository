@@ -15,7 +15,7 @@ nickname - Lets players names be changed to a nickname when playing by DDDDec<br
 Player Pay Check - Gives certain amount of money to player depending on their level by DDDDec<br /><br />
 Slot Machines - Press F on slot machine to bet some money with fruits by DDDDec<br /><br />
 t6utilsHttppostVoteExample - An example of using http request from t6 utils by DDDDec<br /><br />
-tellerbankremoval - Removes all bank functions to only use chat bank commands by DDDDec
+tellerbankremoval - Removes all bank functions to only use chat bank commands by DDDDec<br /><br />
 scoremultiplier - Gives players more points per action that gives points<br /><br />
 
 # T5/BO1 Scripts List
