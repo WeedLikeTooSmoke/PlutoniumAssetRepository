@@ -1,3 +1,3 @@
 <?php
 // Can use color codes ect
-echo "^2Hello World!^7"
+echo "^2Hello World!^7";
