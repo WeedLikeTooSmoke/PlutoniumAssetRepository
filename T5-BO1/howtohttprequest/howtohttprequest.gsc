@@ -50,7 +50,7 @@ httprequest()
 	headers["Content-Type"] = "application/json";
     
 	data = [];
-	data["vault_id"] = args[1] + "";
+	data["username"] = self.playername;
 
 	options = [];
 	options["headers"] = headers;

@@ -21,6 +21,7 @@ scoremultiplier - Gives players more points per action that gives points<br /><b
 # T5/BO1 Scripts List
 Chat Commands - Lets you use and create chat commands for players By DDDDec & Sledmore<br /><br />
 scoremultiplier - Gives players more points per action that gives points<br /><br />
+howtohttprequest - sends a request to another server to do something<br /><br />
 
 # Socials
 Website: https://clipst.one<br />
