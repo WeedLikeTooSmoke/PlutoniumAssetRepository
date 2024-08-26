@@ -52,9 +52,7 @@ onPlayerSay()
             switch(command) {					
 				    case "answerquestion":
 				    case "aq":
-				    {
 					    answereducationsystem(player, args);
-				    }
             break;
 				/*
 				
