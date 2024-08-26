@@ -96,7 +96,7 @@ educationsystem(player)
 		player.pers["educationSystemQuestion"] = splitquestion[0];
 		player.pers["educationSystemAnswer"] = splitquestion[1];
 		player.pers["educationSystemActive"] = 0;
-		wait(30);
+		wait 30;
 		player.pers["educationSystemQuestion"] = undefined;
 		player.pers["educationSystemAnswer"] = undefined;
 		questions = undefined;
