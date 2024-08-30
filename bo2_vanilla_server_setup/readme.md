@@ -6,9 +6,9 @@ What you'll need first
 3. mysql setup
 
 
-edit /game/class.database.php and add your mysql settings
-edit /game/configs/config.request.php and add your api key and server name
-edit /game/configs/config.settings.php and replace the data with what you want them to be
+edit /game/class.database.php and add your mysql settings<br>
+edit /game/configs/config.request.php and add your api key and server name<br>
+edit /game/configs/config.settings.php and replace the data with what you want them to be<br>
 
 upload the database howveer you want from /database/
 
