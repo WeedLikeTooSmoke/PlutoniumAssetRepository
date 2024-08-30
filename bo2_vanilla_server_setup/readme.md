@@ -14,7 +14,7 @@ add the below text to you server config file
 //////////////////////////////////////////////////<br>
 //              Clipstone Settings              //<br>
 //////////////////////////////////////////////////<br>
-set x_api_key "<put your api key here>"<br>
+set x_api_key "put your api key here"<br>
 
 upload the database howveer you want from /database/
 
