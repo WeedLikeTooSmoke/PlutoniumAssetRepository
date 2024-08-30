@@ -10,6 +10,11 @@ edit /game/class.database.php and add your mysql settings<br>
 edit /game/configs/config.request.php and add your api key and server name<br>
 edit /game/configs/config.settings.php and replace the data with what you want them to be<br>
 
+//////////////////////////////////////////////////<br>
+//              Clipstone Settings              //<br>
+//////////////////////////////////////////////////<br>
+set x_api_key "45mny79wqa5yc9q3y9qy"<br>
+
 upload the database howveer you want from /database/
 
 if you need any help you can get to me in my discord server or message me on my twitter
