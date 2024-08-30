@@ -10,7 +10,7 @@ edit /game/class.database.php and add your mysql settings<br>
 edit /game/configs/config.request.php and add your api key and server name<br>
 edit /game/configs/config.settings.php and replace the data with what you want them to be<br>
 
-add the below text to you server config file
+add the below text to you server config file<br>
 //////////////////////////////////////////////////<br>
 //              Clipstone Settings              //<br>
 //////////////////////////////////////////////////<br>
