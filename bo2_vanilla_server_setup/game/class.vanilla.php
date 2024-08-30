@@ -651,7 +651,52 @@ class Vanilla extends Database {
 
             if (self::request($_SERVER["HTTP_USER_AGENT"], "USER_AGENT")) {
 
-                echo "[{$settings["server_color"]}{$settings["server_name"]}^7] Discord | {$settings["server_color"]}{$settings["server_discord"]};[{$settings["server_color"]}{$settings["server_name"]}^7] Discord | {$settings["server_color"]}{$settings["server_website"]}";
+                echo "[{$settings["server_color"]}{$settings["server_name"]}^7] Discord | {$settings["server_color"]}{$settings["server_discord"]};[{$settings["server_color"]}{$settings["server_name"]}^7] Website | {$settings["server_color"]}{$settings["server_website"]}";
+
+            } else {
+
+                echo "[^1ERROR^7] You have been denied access to this plugin";
+
+            }
+
+        } else {
+
+            echo "[^1ERROR^7] You have been denied access to this plugin";
+
+        }
+    }
+
+    public function getAccount() {
+        global $settings;
+
+        if (self::request($_SERVER["HTTP_X_API_KEY"], "X_API_KEY")) {
+
+            if (self::request($_SERVER["HTTP_USER_AGENT"], "USER_AGENT")) {
+
+                if (isset($_POST['guid']) && is_numeric($_POST['guid'])) {
+
+                    $guid = $_POST['guid'];
+
+                    $stmt = $this->connect()->prepare("SELECT * FROM bo2_vanilla_zombie_users WHERE guid = ?");
+                    $stmt->execute([$guid]);
+
+                    if ($stmt->RowCount() > 0) {
+
+                        $account = $stmt->fetch();
+
+                        echo "[{$settings["server_color"]}{$settings["server_name"]}^7] GUID | {$settings["server_color"]}$guid^7;[{$settings["server_color"]}{$settings["server_name"]}^7] Username | {$settings["server_color"]}{$account['username']}^7;[{$settings["server_color"]}{$settings["server_name"]}^7] Rank | {$settings["server_color"]}". sortRank($account['rank']) ."^7;[{$settings["server_color"]}{$settings["server_name"]}^7] Language | {$settings["server_color"]}{$account['language']}^7";
+
+                    } else {
+
+                        echo "[^1ERROR^7] You do not have an account to get data from";
+
+                    }
+
+                } else {
+
+                    echo "[^1ERROR^7] Failed to recieve data from the server";
+
+                }
 
             } else {
 

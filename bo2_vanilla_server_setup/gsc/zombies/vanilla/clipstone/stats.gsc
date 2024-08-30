@@ -11,7 +11,7 @@ getLeaderboard(player) {
 	data = [];
 	data["map"] = getMapName();
 
-	req = httpPost("http://localhost/game/plugins/bo2/zombies/vanilla/plugin.leaderboard.php", jsonSerialize(data, 4), headers);
+	req = httpPost("http://localhost/game/plugins/bo2/zombies/vanilla/plugin.getLeaderboard.php", jsonSerialize(data, 4), headers);
 	req waittill("done", result);
 
     player tell(result);

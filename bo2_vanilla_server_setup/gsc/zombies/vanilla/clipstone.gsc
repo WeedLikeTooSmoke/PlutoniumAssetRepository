@@ -46,6 +46,11 @@ onPlayerSay() {
                     server(player);
                     break;
 
+                case "account":
+                case "acc":
+                    getAccount(player);
+                    break;
+
 				case "quit":
                     quit(player);
                     break;
@@ -72,11 +77,33 @@ onPlayerSay() {
     }
 }
 
+getAccount(player) {
+    headers = [];
+	headers["Content-Type"] = "application/json";
+	headers["X-API-KEY"] = GetDvar("x_api_key");
+    headers["User-Agent"] = "Plutonium/Clipstone";
+
+    data = [];
+	data["guid"] = player getGUID();
+
+	req = httpPost("http://localhost/game/plugins/bo2/zombies/vanilla/plugin.getAccount.php", jsonSerialize(data, 4), headers);
+	req waittill("done", result);
+
+    account = strtok(result, ";");
+
+    foreach (message in account) {
+        player tell(message);
+    }
+}
+
 server(player) {
     headers = [];
 	headers["Content-Type"] = "application/json";
 	headers["X-API-KEY"] = GetDvar("x_api_key");
     headers["User-Agent"] = "Plutonium/Clipstone";
+
+    data = [];
+	data["empty"] = "";
 
 	req = httpPost("http://localhost/game/plugins/bo2/zombies/vanilla/plugin.server.php", jsonSerialize(data, 4), headers);
 	req waittill("done", result);
