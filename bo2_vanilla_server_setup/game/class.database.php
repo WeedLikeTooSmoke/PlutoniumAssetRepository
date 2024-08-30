@@ -10,9 +10,9 @@ class Database {
     function __construct() {
 
         $this->HOST = "127.0.0.1";
-        $this->USERNAME = "root";
-        $this->PASSWORD = "";
-        $this->DBNAME = "clipstone4.0";
+        $this->USERNAME = "<put your mysql username here>";
+        $this->PASSWORD = "<put your mysql password here>";
+        $this->DBNAME = "<put your mysqldb name here>";
         
     }
 

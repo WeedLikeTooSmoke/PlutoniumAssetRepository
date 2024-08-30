@@ -1,8 +1,8 @@
 <?php
 
 $settings = array(
-    "server_name" => "Clipstone",
+    "server_name" => "<put your server name here>",
     "server_color" => "^1",
-    "server_discord" => "https://discord.gg/clipstone",
-    "server_website" => "https://clipst.one"
+    "server_discord" => "<put your discord server here>",
+    "server_website" => "<put your website url here>"
 );
