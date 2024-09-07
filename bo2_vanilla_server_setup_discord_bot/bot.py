@@ -1,4 +1,3 @@
-import random
 import discord
 import mysql
 from discord.ext import commands
