@@ -23,6 +23,14 @@ Chat Commands - Lets you use and create chat commands for players By DDDDec & Sl
 scoremultiplier - Gives players more points per action that gives points<br /><br />
 howtohttprequest - sends a request to another server to do something<br /><br />
 
+# T6/BO2 Vanilla server pack using http requests and mysql
+Working stats counter<br><br>
+Working high round counter<br><br>
+
+# Python BOT for Discord 
+Get highest rounds for each map<br><br>
+Get top stats for top 5 players<br><br>
+
 # Socials
 Website: https://clipst.one<br />
 discord: https://discord.gg/clipstone
