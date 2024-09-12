@@ -14,7 +14,7 @@ class Vanilla extends Database {
 
             if (self::request($_SERVER["HTTP_USER_AGENT"], "USER_AGENT")) {
 
-                if (isset($_POST["username"], $_POST["guid"]) && is_numeric($_POST["guid"])) {
+                if (isset($_POST["username"], $_POST["guid"]) && preg_match("/^[0-9]*$/", $_POST['guid'])) {
 
                     $guid = $_POST["guid"];
                     $username = $_POST["username"];
@@ -66,7 +66,7 @@ class Vanilla extends Database {
 
             if (self::request($_SERVER["HTTP_USER_AGENT"], "USER_AGENT")) {
 
-                if (isset($_POST["guid"]) && is_numeric($_POST["guid"])) {
+                if (isset($_POST["guid"]) && preg_match("/^[0-9]*$/", $_POST['guid'])) {
 
                     $guid = $_POST["guid"];
                     $quit = $_POST["quit"] ?? 0;
@@ -469,7 +469,7 @@ class Vanilla extends Database {
 
             if (self::request($_SERVER["HTTP_USER_AGENT"], "USER_AGENT")) {
 
-                if (isset($_POST["guid"]) && is_numeric($_POST['guid'])) {
+                if (isset($_POST["guid"]) && preg_match("/^[0-9]*$/", $_POST['guid'])) {
 
                     $guid = $_POST['guid'];
 
@@ -673,7 +673,7 @@ class Vanilla extends Database {
 
             if (self::request($_SERVER["HTTP_USER_AGENT"], "USER_AGENT")) {
 
-                if (isset($_POST['guid']) && is_numeric($_POST['guid'])) {
+                if (isset($_POST['guid']) && preg_match("/^[0-9]*$/", $_POST['guid'])) {
 
                     $guid = $_POST['guid'];
 
